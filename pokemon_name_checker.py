@@ -11,7 +11,7 @@ for line in file:
         name = name_box.text.strip()
         out.write(name + '\n') #Writes to output file
     except:
-        out.write(name + 'has an error. Try again!')
+        out.write(name + 'has an error. Try again!\n')
 
 file.close()
 out.close()
