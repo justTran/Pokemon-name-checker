@@ -7,7 +7,6 @@ out = open('times.txt', 'w') #Output file
 for line in file:
     try:
         line = line.replace('\n', '')
-        print(line)
         page = requests.get('https://lols.gg/en/name/checker/na/' + line, headers=headers)
         soup = BeautifulSoup(page.text, 'html.parser')
         name_box = soup.find('h4', attrs={'class': 'text-center'}) #This line approximates the number of days to wait unless avaliable
